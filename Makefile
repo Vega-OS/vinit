@@ -10,7 +10,7 @@ CFILES = $(shell find $(ROOT_DIR/src/) -name "*.c")
 OBJECTS = $(CFILES:.c=.o)
 HEADER_DEPS = $(CFILES:.c=.d)
 
-$(ROOT_DIR)/bin/vinit: $(OBJECTS)
+$(ROOT_DIR)/vinit: $(OBJECTS)
 	@ mkdir -p $(shell dirname $@)
 	$(LD) $(OBJECTS) -T $(ROOT_DIR)/link-x86_64.ld -o $@
 
