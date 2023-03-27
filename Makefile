@@ -1,6 +1,9 @@
-CC = @CC@
-LD = @LD@
-CFLAGS = @CFLAGS@
+CC = gcc
+LD = ld
+CFLAGS = -Werror=implicit -Werror=implicit-function-declaration \
+	-Werror=implicit-int -Werror=int-conversion \
+	-Werror=incompatible-pointer-types -Werror=int-to-pointer-cast \
+	-Werror=return-type -Wunused -pedantic
 
 CFILES = $(shell find src/ -name "*.c")
 OBJECTS = $(CFILES:.c=.o)
