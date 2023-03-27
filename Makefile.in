@@ -17,5 +17,4 @@ $(ROOT_DIR)/vinit: $(OBJECTS)
 
 .PHONY: clean
 clean:
-	rm $(ROOT_DIR)/bin/*
 	rm $(HEADER_DEPS) $(OBJECTS)

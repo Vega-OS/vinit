@@ -4,4 +4,4 @@
 /bin
 *.o
 *.d
-Makefile
+/Makefile
