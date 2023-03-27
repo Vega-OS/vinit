@@ -3,7 +3,7 @@ LD = @LD@
 CFLAGS = @CFLAGS@
 ROOT_DIR = @ROOT_DIR@
 
-CFILES = $(shell find $(ROOT_DIR/src/) -name "*.c")
+CFILES = $(shell find $(ROOT_DIR)/src/ -name "*.c")
 OBJECTS = $(CFILES:.c=.o)
 HEADER_DEPS = $(CFILES:.c=.d)
 
