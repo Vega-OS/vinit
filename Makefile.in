@@ -1,8 +1,9 @@
 CC = @CC@
 LD = @LD@
 CFLAGS = @CFLAGS@
+SRC_DIR = @SRC_DIR@
 
-CFILES = $(shell find src/ -name "*.c")
+CFILES = $(shell find $(SRC_DIR) -name "*.c")
 OBJECTS = $(CFILES:.c=.o)
 HEADER_DEPS = $(CFILES:.c=.d)
 

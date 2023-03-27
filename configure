@@ -617,6 +617,7 @@ PACKAGE_URL=''
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+SRC_DIR
 LD
 CC
 CFLAGS
@@ -664,6 +665,7 @@ ac_user_opts='
 enable_option_checking
 with_cc
 with_ld
+with_src
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1287,6 +1289,7 @@ Optional Packages:
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
   --with-cc=<cc>          Specify the c compiler
   --with-ld=<ld>          Specify the linker
+  --with-src=<src_dir>    Specify the source directory
 
 Report bugs to <ian@mkall.org>.
 _ACEOF
@@ -1756,11 +1759,23 @@ else $as_nop
 fi
 
 
+
+# Check whether --with-src was given.
+if test ${with_src+y}
+then :
+  withval=$with_src; src_dir="$withval"
+else $as_nop
+  src_dir="src"
+fi
+
+
 CFLAGS=$CFLAGS
 
 CC=$c_compiler
 
 LD=$c_ld
+
+SRC_DIR=$src_dir
 
 
 ac_config_files="$ac_config_files Makefile"
